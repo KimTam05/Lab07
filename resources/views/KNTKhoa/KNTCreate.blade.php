@@ -21,10 +21,16 @@
                             <span class="input-group-text" id="MaKH">Mã khoa</span>
                             <input type="text" class="form-control" aria-describedby="KNTMaKH" name="KNTMaKH" value="">
                         </div>
+                        @error('KNTMaKH')
+                            <span class="text-danger"> {{ $message }} </span>    
+                        @enderror
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="TenKH">Tên khoa</span>
-                            <input type="text" class="form-control" aria-describedby="KNTTenKH" name="KNTTenKH" value="">
+                            <input type="text" class="form-control" aria-describedby="KNTTenKH" name="KNTTenKH" value=""> <br>
                         </div>
+                        @error('KNTTenKH')
+                            <span class="text-danger"> {{ $message }} </span>    
+                        @enderror
                         <div class="card-footer">
                             <input type="submit" class="btn btn-primary" name="btnSubmit" value="Thêm mới">
                             

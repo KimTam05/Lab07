@@ -25,7 +25,20 @@ class KNTKhoaController extends Controller
     }
     public function KNTcreateSubmit(Request $request)
     {
-        DB::insert('insert into kntkhoa(KNTMaKH, KNTTenKH) values(?,?)',[$request->KNTMaKH,$request->KNTTenKH]);
+        $request->validate([
+            'KNTMaKH'=> 'required|max:2',
+            'KNTTenKH'=> 'required|max:50'
+        ],
+        [
+            'KNTMaKH.required'=> 'Vui lòng nhập mã khoa vào trường này!',
+            'KNTTenKH.required'=> 'Vui lòng nhập tên khoa vào trường này!',
+            'KNTMaKH.max'=> 'Mã khoa chỉ được tối đa hai kí tự!',
+            'KNTTenKH.max'=> 'Tên khoa chỉ được tối đa 50 kí tự!'
+        ]);
+
+        $data = $request->all('KNTMaKH', 'KNTTenKH');
+
+        DB::table('kntkhoa')->insert($data);
         return redirect('/khoa');
     }
 
