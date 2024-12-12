@@ -33,4 +33,5 @@ Route::group(['prefix'=> 'monhoc'], function () {
     Route::get('/edit/{id}',[KNTMonhocController::class,'KNTEdit'])->name('KNTMonhoc.edit');
     Route::post('/edit/{id}',[KNTMonhocController::class,'KNTEditSubmit']);
     Route::get('/delete/{id}', [KNTMonhocController::class,'KNTDelete'])->name('KNTMonhoc.delete');
+    Route::get('/detail/{id}', [KNTMonhocController::class,'KNTDetail'])->name('KNTMonhoc.detail');
 });

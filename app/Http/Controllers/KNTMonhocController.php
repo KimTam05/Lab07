@@ -11,6 +11,10 @@ class KNTMonhocController extends Controller
         $KNTMonhoc = DB::table("kntmonhoc")->get();
         return view("KNTMonhoc.KNTList",["KNTMonhoc"=>$KNTMonhoc]);
     }
+    public function KNTDetail($id){
+        $KNTMonhoc = DB::table("kntmonhoc")->where("KNTMaMH",$id)->first();
+        return view("KNTMonhoc.KNTDetail",["KNTMonhoc"=>$KNTMonhoc]);
+    }
     public function KNTCreate(){
         return view("KNTMonhoc.KNTCreate");
     }

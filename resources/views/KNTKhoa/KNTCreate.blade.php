@@ -9,7 +9,7 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <section class="container my-3">
+        <div class="container my-3">
             <div class="card">
                 <div class="card-header">
                     <h3>Thêm mới thông tin khoa</h3>
@@ -39,6 +39,6 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
     </body>
 </html>

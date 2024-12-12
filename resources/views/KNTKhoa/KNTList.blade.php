@@ -37,7 +37,7 @@
                                 <td class="text-center">
                                     <a href="/khoa/detail/{{$item->KNTMaKH}}" class="btn btn-success"><i class="fa-solid fa-circle-info"></i></a>
                                     <a href="/khoa/edit/{{$item->KNTMaKH}}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                    <a href="/khoa/delete/{{$item->KNTMaKH}}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa khoa này không?')"><i class="fa-solid fa-trash"></i></button> 
+                                    <a href="/khoa/delete/{{$item->KNTMaKH}}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa khoa này không?')"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         @endforeach
